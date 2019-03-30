@@ -1,0 +1,13 @@
+.day__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.day__item {
+    border-bottom: 1px solid #dadada;
+}
+
+.day__item:last-child {
+    border-bottom: none;
+}

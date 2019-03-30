@@ -1,0 +1,42 @@
+.product {
+    padding: 20px 45px;
+}
+
+.product__status {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.product__item {
+    display: flex;
+    padding: 10px;
+}
+
+.product__item:last-child {
+    padding-bottom: 0;
+}
+
+.product__position__pic {
+    background-image: url('../../images/bird.jpg');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+}
+
+.product__position__info {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.product__position__desc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product__position__name {
+    margin-bottom: 5px;
+}
