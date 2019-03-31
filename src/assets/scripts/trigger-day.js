@@ -7,13 +7,17 @@ function triggerDay() {
         const target = event.target;
 
         if (target.classList.contains('day__trigger')) {
+            const parent = target.parentElement;
+            const targetSibling = parent.nextElementSibling;
 
             if (target.classList.contains('is-active')) {
                 target.classList.remove('is-active');
+                targetSibling.style.display = 'none';
             } else {
                 target.classList.add('is-active');
+                targetSibling.style.display = 'block';
             }
         }
     })
 }
-export default triggerDay();    
+export default triggerDay();

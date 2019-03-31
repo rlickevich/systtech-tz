@@ -1,4 +1,4 @@
-@import  './layout/base.css';
-@import  './blocks/whouse.css';
-@import  './blocks/day.css';
-@import  './blocks/product.css';
+@import  './layout/base.scss';
+@import  './blocks/whouse.scss';
+@import  './blocks/day.scss';
+@import  './blocks/product.scss';

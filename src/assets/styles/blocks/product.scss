@@ -1,11 +1,17 @@
 .product {
     padding: 20px 45px;
+    display: flex;
+    flex-direction: column;
 }
 
 .product__status {
     display: flex;
     justify-content: space-between;
     margin-bottom: 6px;
+}
+
+.product__status__trigger {
+    flex: 1;
 }
 
 .product__status__trigger::before {
@@ -15,6 +21,15 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
+}
+
+.is-active.product__status__trigger::before {
+    transform: rotate(180deg);
+    vertical-align: text-top;
+}
+
+.product__list {
+    display: none;
 }
 
 .product__item {

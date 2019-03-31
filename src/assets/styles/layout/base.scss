@@ -48,8 +48,9 @@ h6 {
 }
 
 .wrapper {
-    position: relative;
     background-color: #ededed;
     color: #707070;
     font-weight: normal;
+    overflow: hidden;
+    min-height: 100%;
 }
