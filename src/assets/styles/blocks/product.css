@@ -8,6 +8,15 @@
     margin-bottom: 6px;
 }
 
+.product__status__trigger::before {
+    content: "";
+    border: 5px solid transparent;
+    border-top-color: #707070;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
 .product__item {
     display: flex;
     padding: 10px;
@@ -30,13 +39,17 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%;
+    color: black;
+    font-weight: 500;
+}
+
+.product__position__name {
+    margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .product__position__desc {
     display: flex;
     justify-content: space-between;
-}
-
-.product__position__name {
-    margin-bottom: 5px;
+    font-size: 18px;
 }
