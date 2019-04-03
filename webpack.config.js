@@ -14,6 +14,12 @@ module.exports = {
     contentBase: './dist'
   },
   module: {
+      // loaders: [
+      //   {
+      //     test: /\.json$/,
+      //     loader: 'json-loader'
+      //   }
+      // ],
       rules: [
         {
           test: /\.css$/,

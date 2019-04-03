@@ -25,7 +25,10 @@
 }
 
 .day__list {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 0;
 }
 
 .day__item {

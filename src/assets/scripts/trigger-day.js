@@ -12,10 +12,10 @@ function triggerDay() {
 
             if (target.classList.contains('is-active')) {
                 target.classList.remove('is-active');
-                targetSibling.style.display = 'none';
+                targetSibling.style.height = '0';
             } else {
                 target.classList.add('is-active');
-                targetSibling.style.display = 'block';
+                targetSibling.style.height = '100%';
             }
         }
     })
