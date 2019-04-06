@@ -5,36 +5,39 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    app: './src/index.js',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
     contentBase: './dist'
   },
   module: {
-      // loaders: [
-      //   {
-      //     test: /\.json$/,
-      //     loader: 'json-loader'
-      //   }
-      // ],
-      rules: [
+    rules: [
         {
           test: /\.css$/,
           use: [
-            devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-            'css-loader'
-            
+            MiniCssExtractPlugin.loader, // Создаёт отдельный файл app.css
+            {
+              loader: 'postcss-loader',
+              options: { config: { path: './postcss.config.js' } }
+            },
+            'css-loader',
           ]
         },
         {
           test: /\.scss$/,
           use: [
-            devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+            // 'style-loader', // Сохраняет стили в app.js
+            MiniCssExtractPlugin.loader, // Создаёт отдельный файл app.css
             'css-loader',
-            'postcss-loader',
+            {
+              loader: 'postcss-loader',
+              options: { config: { path: './postcss.config.js' } }
+            },
             'sass-loader'
           ]
         },
@@ -63,7 +66,8 @@ module.exports = {
         filename: 'index.html'
       }),
       new MiniCssExtractPlugin({
-        filename: devMode ? '[name].css' : '[name].[hash].css'
+        // filename: devMode ? '[name].css' : '[name].[hash].css'
+        filename: '[name].css'
       }),
       new CleanWebpackPlugin()
     ]
