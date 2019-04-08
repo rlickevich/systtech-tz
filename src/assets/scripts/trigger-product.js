@@ -19,4 +19,4 @@ function triggerProduct() {
         }
     })
 }
-export default triggerProduct();
+triggerProduct();

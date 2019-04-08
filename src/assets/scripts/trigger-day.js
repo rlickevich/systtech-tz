@@ -20,4 +20,4 @@ function triggerDay() {
         }
     })
 }
-export default triggerDay();
+triggerDay();
