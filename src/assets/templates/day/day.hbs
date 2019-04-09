@@ -1,12 +1,14 @@
 <ul class="day__list" id="day__list">
-    <li class="day__item" id="day__item">
-        <div class="product">
-            <div class="product__status">
-                <div class="product__status__name">Приход №31231423</div>
-                <div class="product__status__cost">300 &#8381;</div>
+    {{#each items}}
+        <li class="day__item" id="day__item">
+            <div class="product">
+                <div class="product__status">
+                    <div class="product__status__name">{{ type }} №{{ id }}</div>
+                    <div class="product__status__cost">300 &#8381;</div>
+                </div>
+                <a href="#" class="product__status__trigger">Товаров: {{item.length}}</a>
+                {{> "../product/product.hbs" }}
             </div>
-            <a href="#" class="product__status__trigger">Товаров: 3</a>
-            {{> "../product/product.hbs" }}
-        </div>
-    </li>
+        </li>
+    {{/each}}
 </ul> 

@@ -1,4 +1,7 @@
-@import  './layout/base.scss';
-@import  './blocks/whouse.scss';
-@import  './blocks/day.scss';
-@import  './blocks/product.scss';
+
+@import './utils/vars.scss';
+@import './layout/base.scss';
+@import './blocks/whouse.scss';
+@import './blocks/day.scss';
+@import './blocks/product.scss';
+@import './utils/mixins.scss';

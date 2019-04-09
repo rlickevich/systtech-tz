@@ -1,11 +1,11 @@
-        {{#each list}}
-            <li class="whouse__item" id="whouse__item">
-                <div class="day">
-                    <div class="day__header">
-                        <a href="#" class="day__trigger">{{ date }}</a>
-                        <div class="day__documents">Документов: 4 (7 444,35 &#8381;)</div>
-                    </div>
-                    {{> "../day/day.hbs" }}
+    {{#each list}}
+        <li class="whouse__item" id="whouse__item">
+            <div class="day">
+                <div class="day__header">
+                    <a href="#" class="day__trigger">{{ date }}</a>
+                    <div class="day__documents">Документов: {{items.length}} (7 444,35 &#8381;)</div>
                 </div>
-            </li>
-        {{/each}}
+                {{> "../day/day.hbs" }}
+            </div>
+        </li>
+    {{/each}}
