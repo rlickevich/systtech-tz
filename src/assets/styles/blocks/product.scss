@@ -10,6 +10,10 @@
     margin-bottom: 6px;
 }
 
+.product__status__cost {
+    white-space: nowrap;
+}
+
 .product__status__trigger {
     flex: 1;
 }
@@ -35,6 +39,11 @@
 .product__item {
     display: flex;
     padding: 10px;
+
+    @include phone {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .product__item:last-child {
@@ -48,6 +57,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include phone {
+        margin-right: 0;
+    }
 }
 
 .product__position__pic-img {
@@ -67,10 +80,24 @@
 .product__position__name {
     margin-bottom: 5px;
     font-size: 14px;
+
+    @include phone {
+        text-align: center;
+    }
 }
 
 .product__position__desc {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
+
+    @include table {
+        font-size: 17px;
+    }
+
+    @include phone {
+        font-size: 16px;
+        flex-direction: column;
+        align-items: center;
+    }
 }

@@ -24,6 +24,18 @@
     transform: rotate(180deg);
 }
 
+.day__desc {
+    display: flex;
+
+    @include phone {
+        flex-direction: column;
+    }
+}
+
+.day__total {
+    margin-left: 10px;
+}
+
 .day__list {
     display: flex;
     flex-direction: column;

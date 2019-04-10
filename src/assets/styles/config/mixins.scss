@@ -1,0 +1,30 @@
+
+@mixin desktop {
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin smDesktop {
+    @media (max-width: $smDesktop) {
+        @content;
+    }
+}
+
+@mixin table {
+    @media (max-width: $table) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: $phone) {
+        @content;
+    }
+}
+
+@mixin smPhone {
+    @media (max-width: $smPhone) {
+        @content;
+    }
+}

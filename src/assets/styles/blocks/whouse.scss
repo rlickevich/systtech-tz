@@ -17,6 +17,14 @@
     width: 450px;
     margin-bottom: 10px;
     padding: 10px 0;
+
+    @include phone {
+        width: 320px;
+    }
+
+    @include smPhone {
+        width: 260px;
+    }
 }
 
 .whouse__item:last-child {

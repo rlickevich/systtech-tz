@@ -3,7 +3,10 @@
             <div class="day">
                 <div class="day__header">
                     <a href="#" class="day__trigger">{{ date }}</a>
-                    <div class="day__documents">Документов: {{items.length}} (7 444,35 &#8381;)</div>
+                    <div class="day__desc">
+                        <div class="day__documents">Документов: {{ items.length }}</div>
+                        <div class="day__total">(7 444,35 &#8381;)</div>
+                    </div>
                 </div>
                 {{> "../day/day.hbs" }}
             </div>

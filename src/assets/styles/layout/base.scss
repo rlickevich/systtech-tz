@@ -9,11 +9,28 @@ html {
     line-height: $mainLineHeight;
     font-family: $mainFont;
     color: $mainFontColor;
+
+    @include table {
+        font-size: 15px;
+    }
+
+    @include phone {
+        font-size: 14px;
+    }
+
+    @include smPhone {
+        font-size: 13px;
+    }
 }
 
 html,
 body {
   height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 ul {
@@ -48,8 +65,6 @@ h6 {
 
 .wrapper {
     background-color: #ededed;
-    // color: #707070;
-    // font-weight: normal;
     overflow: hidden;
     min-height: 100%;
 }

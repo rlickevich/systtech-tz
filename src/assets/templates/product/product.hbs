@@ -2,13 +2,13 @@
     {{#each item}}
         <li class="product__item" id="product__item">
             <div class="product__position__pic">
-                <img src="{{image}}" alt="" class="product__position__pic-img">
+                <img src="{{ image }}" alt="" class="product__position__pic-img">
             </div>
             <div class="product__position__info">
-                <div class="product__position__name">{{name}}</div>
+                <div class="product__position__name">{{ name }}</div>
                 <div class="product__position__desc">
-                    <div class="product__position__quantity">{{quantity}} штук &#215; {{price}} &#8381;</div>
-                    <div class="product__position__cost">{{total}} &#8381;</div>
+                    <div class="product__position__quantity">{{ quantity }} штук &#215; {{ price }} &#8381;</div>
+                    <div class="product__position__cost">{{ total }} &#8381;</div>
                 </div>
             </div>
         </li>

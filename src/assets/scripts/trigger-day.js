@@ -17,7 +17,10 @@ function triggerDay() {
                 target.classList.add('is-active');
                 targetSibling.style.height = '100%';
             }
+
         }
+
+        
     })
 }
 triggerDay();
