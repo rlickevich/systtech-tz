@@ -1,9 +1,7 @@
-### SQL-запрос
+### Тестовое задание "Системные технологии".
 
 ```sh
-SELECT docs.date, docTypes.name AS type, docs.id, products.name, products.image, products.price, rows.quantity, products.removed FROM docs 
-                   INNER JOIN docTypes ON docs.typeId = docTypes.id
-                       INNER JOIN rows ON docs.id = rows.docId
-                           INNER JOIN products ON rows.productId = products.id;
+В ветке node-sqlite при помощи node.js делаю sql-запрос, выбирающий из базы нужные данные.
+Затем экспортирую полученные данные в файл с расширением json (database.json).
 ```
 
