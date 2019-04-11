@@ -61,9 +61,33 @@ function results() {
     });
 }
 
+const resultDB = results();
+
+// for (let i = 0; i < resultDB.length; i++) {
+//     const one = resultDB[i];
+//     // console.log(one);
+//     let sum = 0;
+//     console.log(sum);
+
+//     for (let i = 0; i < one.items.length; i++) {
+//         const two = one.items[i];
+//         // console.log(two);
+
+//         for (let i = 0; i < two.item.length; i++) {
+//             const three = two.item[i];
+//             // console.log(three.total);
+//             for (let key in three) {
+//                 console.log(key);
+//                 // console.log(three[key]);
+//                 sum += three[key];
+//             }
+//         }
+//     }
+// }
+
 function test() {
     const wList = document.querySelector('#whouse__list');
-    const resultDB = results();
+    
     let obj = {};
         obj.list = resultDB;
 
