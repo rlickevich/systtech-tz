@@ -28,6 +28,7 @@ function sortRemoved() {
 function results() {
     const sortRem = sortRemoved();
     const result = {};
+    let sumCostItems = 0;
 
     sortRem.forEach(item => {
 
@@ -42,17 +43,22 @@ function results() {
             result[item.date].items[item.id] = {
                 type: item.type,
                 id: item.id,
+                total: sumCostItems,
                 item: []
             }
         }
+
+        const itemTotal = (Math.round((item.price * item.quantity) * 100) / 100);
+        sumCostItems += itemTotal;
 
         result[item.date].items[item.id].item.push({
             image: item.image,
             name: item.name,
             price: item.price,
             quantity: item.quantity,
-            total: (Math.round((item.price * item.quantity) * 100) / 100)
+            total: itemTotal
         })
+
     })
 
     return Object.keys(result).map(key => {
@@ -60,6 +66,7 @@ function results() {
         return result[key]
     });
 }
+// console.log(results());
 
 function test() {
     const wList = document.querySelector('#whouse__list');
@@ -67,7 +74,7 @@ function test() {
     let obj = {};
         obj.list = resultDB;
 
-    console.log(obj);
+    // console.log(obj);
 
     const template = require('../templates/whouse/whouse-item.hbs');
     const result = template(obj);
