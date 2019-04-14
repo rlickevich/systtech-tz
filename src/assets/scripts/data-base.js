@@ -28,14 +28,14 @@ function sortRemoved() {
 function results() {
     const sortRem = sortRemoved();
     const result = {};
-    let sumCostItems = 0;
 
     sortRem.forEach(item => {
 
         if (!result[item.date]) {
             result[item.date] = {
                 date: item.date,
-                items: {}
+                items: {},
+                total: 0
             }
         }
 
@@ -43,13 +43,17 @@ function results() {
             result[item.date].items[item.id] = {
                 type: item.type,
                 id: item.id,
-                total: sumCostItems,
+                total: 0,
                 item: []
             }
         }
 
         const itemTotal = (Math.round((item.price * item.quantity) * 100) / 100);
-        sumCostItems += itemTotal;
+        const itemsTotal = (Math.round((result[item.date].items[item.id].total + itemTotal) * 100) / 100);
+
+        result[item.date].total += itemTotal;
+
+        result[item.date].items[item.id].total = itemsTotal;
 
         result[item.date].items[item.id].item.push({
             image: item.image,
@@ -58,7 +62,6 @@ function results() {
             quantity: item.quantity,
             total: itemTotal
         })
-
     })
 
     return Object.keys(result).map(key => {
@@ -66,16 +69,12 @@ function results() {
         return result[key]
     });
 }
-// console.log(results());
 
 function test() {
     const wList = document.querySelector('#whouse__list');
     const resultDB = results();
     let obj = {};
         obj.list = resultDB;
-
-    // console.log(obj);
-
     const template = require('../templates/whouse/whouse-item.hbs');
     const result = template(obj);
 
